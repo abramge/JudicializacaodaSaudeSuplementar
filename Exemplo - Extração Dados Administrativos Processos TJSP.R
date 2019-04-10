@@ -20,37 +20,36 @@ library(zoo)
 assuntos <- as.vector(esaj::cjsg_table("subjects"))
 camaras <- esaj::cjsg_table("courts")
 
-
-#### DOWNLOAD PÁGINA DECISÕES ####
+#### DOWNLOAD PÃGINA DECISÃ•ES ####
 
 
 #### EXEMPLO PARA O ANO DE 2018 ####
 
-# setar diretório de trabalho
+# setar diretÃ³rio de trabalho
 setwd()
 
 # contar quantidade de processos identificados
 n_2018 <- esaj::peek_cjsg(query='',
-                          # extrair processos com códigos referentes aos planos de saúde
+                          # extrair processos com cÃ³digos referentes aos planos de saÃºde
                           subjects=c('5967','6233','10000629','10000983','10001132','10001318'),
-                          # data de início - 1º dia de 2018
+                          # data de inÃ­cio - 1Âº dia de 2018
                           registration_start="2018-01-01",
-                          # data final - último dia de 2018
+                          # data final - Ãºltimo dia de 2018
                           registration_end="2018-12-31",
                           # fonte: TJSP
                           tj="tjsp")
 
 # extrair dados do sistema de consultas sobre processos judiciais
 TESTE_2018 <- esaj::download_cjsg(query='',
-                                  # extrair processos com códigos referentes aos planos de saúde
+                                  # extrair processos com cÃ³digos referentes aos planos de saÃºde
                                   subjects=c('5967','6233','10000629','10000983','10001132','10001318'),
-                                  # data de início - 1º dia de 2018
+                                  # data de inÃ­cio - 1Âº dia de 2018
                                   registration_start="2018-01-01",
-                                  # data final - último dia de 2018
+                                  # data final - Ãºltimo dia de 2018
                                   registration_end="2018-12-31",
                                   # fonte: TJSP
                                   tj="tjsp",
-                                  # definir o número máximo de páginas no site do TJ
+                                  # definir o nÃºmero mÃ¡ximo de pÃ¡ginas no site do TJ
                                   max_page=ceiling(n_2018[2]/20))
 
 # vetorizar e parsear os dados
