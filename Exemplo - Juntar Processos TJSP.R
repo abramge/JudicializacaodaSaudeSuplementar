@@ -23,21 +23,21 @@ camaras <- esaj::cjsg_table("courts")
 
 #### ABRIR BASES ANUAIS E APENDAR ####
 
-# setar diretório de trabalho
+# setar diretÃ³rio de trabalho
 setwd()
 
 # carregar bases de processos
-df_tjsp_2007 <- readRDS(file="df_tjsp_2007.rds")
-df_tjsp_2008 <- readRDS(file="df_tjsp_2008.rds")
-df_tjsp_2009 <- readRDS(file="df_tjsp_2009.rds")
-df_tjsp_2010 <- readRDS(file="df_tjsp_2010.rds")
-df_tjsp_2011 <- readRDS(file="df_tjsp_2011.rds")
-df_tjsp_2012 <- readRDS(file="df_tjsp_2012.rds")
-df_tjsp_2013 <- readRDS(file="df_tjsp_2013.rds")
-df_tjsp_2014 <- readRDS(file="df_tjsp_2014.rds")
-df_tjsp_2015 <- readRDS(file="df_tjsp_2015.rds")
-df_tjsp_2016 <- readRDS(file="df_tjsp_2016.rds")
-df_tjsp_2017 <- readRDS(file="df_tjsp_2017.rds")
+df_tjsp_2007 <- readRDS(file="list_parse_cposg_2007.rds")
+df_tjsp_2008 <- readRDS(file="list_parse_cposg_2008.rds")
+df_tjsp_2009 <- readRDS(file="list_parse_cposg_2009.rds")
+df_tjsp_2010 <- readRDS(file="list_parse_cposg_2010.rds")
+df_tjsp_2011 <- readRDS(file="list_parse_cposg_2011.rds")
+df_tjsp_2012 <- readRDS(file="list_parse_cposg_2012.rds")
+df_tjsp_2013 <- readRDS(file="list_parse_cposg_2013.rds")
+df_tjsp_2014 <- readRDS(file="list_parse_cposg_2014.rds")
+df_tjsp_2015 <- readRDS(file="list_parse_cposg_2015.rds")
+df_tjsp_2016 <- readRDS(file="list_parse_cposg_2016.rds")
+df_tjsp_2017 <- readRDS(file="list_parse_cposg_2017.rds")
 
 # appendar os dados
 df_tjsp_TOTAL <- do.call("rbind",
